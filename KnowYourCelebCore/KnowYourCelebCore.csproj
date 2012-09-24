@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FE27E145-F5F8-4822-89E6-1A0BF442EC76}</ProjectGuid>
+    <ProjectGuid>{B1F69E0D-4BCB-4CF1-B545-3F6327A0188E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>KnowYourCelebCore</RootNamespace>

@@ -21,10 +21,6 @@ c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\resources.resfiles
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\pri.resfiles
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\LanguageQualifiers.txt
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\ProjectArchitectures.txt
-c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\priconfig.xml.intermediate
-c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\layout.resfiles.intermediate
-c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\resources.resfiles.intermediate
-c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\pri.resfiles.intermediate
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\Controls\Normal.g.i.cs
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\Controls\Normal.g.cs
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\Controls\Normal.xaml
