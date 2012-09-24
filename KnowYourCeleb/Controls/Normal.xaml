@@ -17,6 +17,7 @@
 			<Button Content="Button" HorizontalAlignment="Left" Margin="25,132,0,0" VerticalAlignment="Top" Height="86" Width="126"/>
 			<RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="25,58,0,0" VerticalAlignment="Top"/>
 			<RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top"/>
+			<Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="22" Margin="25,256,0,0" Stroke="Black" VerticalAlignment="Top" Width="126"/>
 		</Grid>
 		<Grid HorizontalAlignment="Left" Height="214" Margin="347,332,0,0" VerticalAlignment="Top" Width="280">
 			<Button Width="170" Name="First" Content="Button" HorizontalAlignment="Left" Margin="59,10,0,0" VerticalAlignment="Top"/>
