@@ -1,0 +1,1 @@
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\KnowYourCeleb.csproj;neutral
