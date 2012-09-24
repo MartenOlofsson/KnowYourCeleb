@@ -9,102 +9,21 @@
     d:DesignHeight="301.493"
     d:DesignWidth="600">
 	<UserControl.Resources>
-		<Storyboard x:Name="StoryboardAnimate">
-			<DoubleAnimation x:Name="DoubleAnimationWidth"
-								Storyboard.TargetName="BorderBmi"
-								Storyboard.TargetProperty="Width"
-								EnableDependentAnimation="True"
-								Duration="00:00:3"
-								From="1">
-				<DoubleAnimation.EasingFunction>
-					<ElasticEase EasingMode="EaseOut" Oscillations="3" Springiness="9" />
-				</DoubleAnimation.EasingFunction>
-			</DoubleAnimation>
-			<DoubleAnimation x:Name="DoubleAnimationHeight"
-								Storyboard.TargetName="BorderBmi"
-								Storyboard.TargetProperty="Height"
-								EnableDependentAnimation="True"
-								Duration="00:00:3"
-								From="1">
-				<DoubleAnimation.EasingFunction>
-					<ElasticEase EasingMode="EaseOut" Oscillations="3" Springiness="9" />
-				</DoubleAnimation.EasingFunction>
-			</DoubleAnimation>
-			<DoubleAnimation x:Name="DoubleAnimationFontSize"
-								Storyboard.TargetName="TextBlockBmi"
-								Storyboard.TargetProperty="FontSize"
-								EnableDependentAnimation="True"
-								Duration="00:00:3"
-								From="1"
-								To="30">
-				<DoubleAnimation.EasingFunction>
-					<ElasticEase EasingMode="EaseOut" Oscillations="3" Springiness="9" />
-				</DoubleAnimation.EasingFunction>
-			</DoubleAnimation>
-		</Storyboard>
+		<Storyboard x:Name="StoryboardAnimate"/>
 	</UserControl.Resources>
-	<Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" UseLayoutRounding="True" Margin="-128,0,0,-594">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="140" />
-			<RowDefinition Height="*" />
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="100" />
-			<ColumnDefinition Width="*" />
-		</Grid.ColumnDefinitions>
-
-		<TextBlock Grid.Column="1" Text="BMI Uträknaren" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
-
-		<Grid Grid.Row="1" Grid.Column="1">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto" />
-				<ColumnDefinition Width="*" />
-			</Grid.ColumnDefinitions>
-			<Grid>
-				<StackPanel>
-					<TextBlock Text="Längd (cm)" FontSize="30" />
-					<TextBox x:Name="TextBoxHeight" Height="44" Width="200" HorizontalAlignment="Left" FontSize="25" Text="" x:FieldModifier="public" />
-					<TextBlock Text="Vikt (kg)" FontSize="30" Margin="0,20,0,0" />
-					<TextBox x:Name="TextBoxWeight" Height="44" Width="200" HorizontalAlignment="Left" FontSize="25" Text="" x:FieldModifier="public" />
-					<Button x:ConnectionId='1' x:Name="ButtonCalculate" Content="Beräkna" Width="200" HorizontalAlignment="Left" Margin="0,35,0,0" FontSize="25"                               />
-				</StackPanel>
-			</Grid>
-			<Grid Grid.Column="1" Margin="40,0,0,0">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto" />
-					<ColumnDefinition Width="Auto" />
-				</Grid.ColumnDefinitions>
-				<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,35,0,0">
-					<Border Width="400" Height="400" Background="#ff5943" />
-					<Border Width="310" Height="310" Background="#ffc343" />
-					<Border Width="210" Height="210" Background="#38b1c8" />
-					<Border Width="110" Height="110" Background="#0e6676" />
-					<Border x:Name="BorderBmi" Width="1" Height="1" Background="#69e200" Opacity="0.8" BorderThickness="2" BorderBrush="#009900" />
-					<TextBlock x:Name="TextBlockBmi" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
-				</Grid>
-				<Grid Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,35,0,0">
-					<StackPanel>
-						<StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-							<Border Width="50" Height="50" Background="#ff5943" />
-							<TextBlock Text="Fetma" FontSize="25" VerticalAlignment="Center" Margin="20,0,0,0" />
-						</StackPanel>
-						<StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-							<Border Width="50" Height="50" Background="#ffc343" />
-							<TextBlock Text="Övervikt" FontSize="25" VerticalAlignment="Center" Margin="20,0,0,0" />
-						</StackPanel>
-						<StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-							<Border Width="50" Height="50" Background="#38b1c8" />
-							<TextBlock Text="Normalvikt" FontSize="25" VerticalAlignment="Center" Margin="20,0,0,0" />
-						</StackPanel>
-						<StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-							<Border Width="50" Height="50" Background="#0e6676" />
-							<TextBlock Text="Undervikt" FontSize="25" VerticalAlignment="Center" Margin="20,0,0,0" />
-						</StackPanel>
-					</StackPanel>
-				</Grid>
-			</Grid>
+	<Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" UseLayoutRounding="True" Margin="0,0,-363,-255">
+		<Canvas Name="MainCanvas" HorizontalAlignment="Left" Height="273" Margin="347,54,0,0" VerticalAlignment="Top" Width="280" Background="White"/>
+		<Grid HorizontalAlignment="Left" Height="348" Margin="90,81,0,0" VerticalAlignment="Top" Width="175">
+			<Button Content="Button" HorizontalAlignment="Left" Margin="25,132,0,0" VerticalAlignment="Top" Height="86" Width="126"/>
+			<RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="25,58,0,0" VerticalAlignment="Top"/>
+			<RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top"/>
 		</Grid>
-		<Canvas Name="MainCanvas"  Grid.Column="1" HorizontalAlignment="Left" Height="273" Margin="338,174,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280"/>
+		<Grid HorizontalAlignment="Left" Height="214" Margin="347,332,0,0" VerticalAlignment="Top" Width="280">
+			<Button Width="170" Name="First" Content="Button" HorizontalAlignment="Left" Margin="59,10,0,0" VerticalAlignment="Top"/>
+			<Button Width="170" Name="Second" Content="Button" HorizontalAlignment="Left" Margin="59,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,0.382"/>
+			<Button Width="170" Name="Third" Content="Button" HorizontalAlignment="Left" Margin="59,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.921,1.197"/>
+			<Button Width="170" Name="Fourth"  Content="Button" HorizontalAlignment="Left" Margin="59,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,1.553"/>
+		</Grid>
 	</Grid>
 </UserControl>
 

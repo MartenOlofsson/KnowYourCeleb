@@ -9,8 +9,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-		<UserControls:Normal x:ConnectionId='1' x:Name="NormalView"                              Margin="158,0,258,560" />
-		<UserControls:Snapped x:ConnectionId='2' x:Name="SnappedView" Visibility="Collapsed"                               />
+		<UserControls:Normal x:ConnectionId='1' x:Name="NormalView"                              Margin="198,148,446,388" />
+		<UserControls:Snapped x:ConnectionId='2' x:Name="SnappedView" Visibility="Collapsed"                               Margin="491,0,567,0" />
 	</Grid>
 </Page>
 
