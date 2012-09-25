@@ -5,7 +5,7 @@
     <WindowsUser>marten.olofsson</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>ACCA535F326C1CB32233ACF412E60BC4906780B1618179C9A1CDB4C498016335</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>9D6B7565D1D800D2DAF9013B593916660EAB305275A05D08B8B79F9289567E84</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2b36ad11-1902-4320-9e8c-7b1981d19b3d_1.0.0.0_neutral__ebqyhs18kzhqa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2b36ad11-1902-4320-9e8c-7b1981d19b3d_ebqyhs18kzhqa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>2b36ad11-1902-4320-9e8c-7b1981d19b3d</RegisteredPackageID>
@@ -16,17 +16,17 @@
     <AppXManifest Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-25T19:10:05.480</Modified>
+      <Modified>2012-09-25T19:32:01.121</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.exe">
       <PackagePath>KnowYourCeleb.exe</PackagePath>
-      <Modified>2012-09-25T19:10:04.562</Modified>
+      <Modified>2012-09-25T19:41:47.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.pdb">
       <PackagePath>KnowYourCeleb.pdb</PackagePath>
-      <Modified>2012-09-25T19:10:04.361</Modified>
+      <Modified>2012-09-25T19:41:47.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.pdb">
       <PackagePath>KnowYourCelebCore.pdb</PackagePath>
@@ -39,12 +39,12 @@
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-15T18:42:52.000</Modified>
+      <Modified>2012-09-25T19:16:29.175</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-15T18:42:52.000</Modified>
+      <Modified>2012-09-25T19:16:40.592</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
@@ -54,7 +54,7 @@
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-15T18:42:52.000</Modified>
+      <Modified>2012-09-25T19:18:07.678</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\adrienbrody.jpg">
       <PackagePath>Controls\adrienbrody.jpg</PackagePath>
@@ -142,19 +142,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\Controls\Normal.xaml">
       <PackagePath>Controls\Normal.xaml</PackagePath>
-      <Modified>2012-09-25T18:37:22.507</Modified>
+      <Modified>2012-09-25T19:41:22.838</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\Controls\Snapped.xaml">
       <PackagePath>Controls\Snapped.xaml</PackagePath>
-      <Modified>2012-09-25T18:38:17.900</Modified>
+      <Modified>2012-09-25T19:41:45.173</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2012-09-25T18:22:40.164</Modified>
+      <Modified>2012-09-25T19:29:48.605</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-09-25T19:10:04.699</Modified>
+      <Modified>2012-09-25T19:32:01.060</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
