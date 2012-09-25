@@ -1,0 +1,10 @@
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.dll
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.pdb
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.pri
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\obj\Debug\KnowYourCelebCore.dll
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\obj\Debug\KnowYourCelebCore.pdb
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\obj\Debug\priconfig.xml
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\obj\Debug\layout.resfiles
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\obj\Debug\resources.resfiles
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\obj\Debug\pri.resfiles
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\obj\Debug\LanguageQualifiers.txt

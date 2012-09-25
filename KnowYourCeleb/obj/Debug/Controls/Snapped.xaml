@@ -8,20 +8,20 @@
     mc:Ignorable="d" Height="800" Width="320">
 	<Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" UseLayoutRounding="True">
 		<Grid HorizontalAlignment="Left" Height="160" Margin="50,148,0,0" VerticalAlignment="Top" Width="222">
-			<RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="41,50,0,0" VerticalAlignment="Top"/>
-			<RadioButton Content="RadioButton" Margin="41,84,13,0" VerticalAlignment="Top"/>
+			<RadioButton Name="RadioRookie" Content="RadioButton" HorizontalAlignment="Left" Margin="41,50,0,0" VerticalAlignment="Top"/>
+			<RadioButton Name="RadioExpert" Content="RadioButton" Margin="41,84,13,0" VerticalAlignment="Top"/>
 		</Grid>
-		<Grid HorizontalAlignment="Left" Height="311" Margin="10,551,0,-62" VerticalAlignment="Top" Width="291">
-			<Button x:ConnectionId='1' Width="170" Name="First"                     Content="Button" HorizontalAlignment="Left" Margin="59,63,0,0" VerticalAlignment="Top"/>
-			<Button x:ConnectionId='2' Width="170" Name="Second"                      Content="Button" HorizontalAlignment="Left" Margin="59,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,0.382"/>
-			<Button x:ConnectionId='3' Width="170" Name="Third"                     Content="Button" HorizontalAlignment="Left" Margin="59,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.921,1.197"/>
-			<Button x:ConnectionId='4' Width="170" Name="Fourth"                      Content="Button" HorizontalAlignment="Left" Margin="59,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,1.553"/>
-			<Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="42" Margin="59,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="170"/>
+		<Grid Name="GameButtons" HorizontalAlignment="Left" Height="311" Margin="19,529,0,-40" VerticalAlignment="Top" Width="291">
+			<Button x:ConnectionId='2' Width="170" Name="First"                     Content="Button" HorizontalAlignment="Left" Margin="59,63,0,0" VerticalAlignment="Top"/>
+			<Button x:ConnectionId='3' Width="170" Name="Second"                      Content="Button" HorizontalAlignment="Left" Margin="59,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,0.382"/>
+			<Button x:ConnectionId='4' Width="170" Name="Third"                     Content="Button" HorizontalAlignment="Left" Margin="59,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.921,1.197"/>
+			<Button x:ConnectionId='5' Width="170" Name="Fourth"                      Content="Button" HorizontalAlignment="Left" Margin="59,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,1.553"/>
+			<Rectangle Name="Rektangle" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="42" Margin="59,10,62,259" Stroke="Black" VerticalAlignment="Center" Width="170"/>
 		</Grid>
 		<Grid HorizontalAlignment="Left" Height="305" Margin="10,219,-84,0" VerticalAlignment="Top" Width="385">
 			<Canvas x:Name="MainCanvas" HorizontalAlignment="Left" Height="237" Margin="40,64,0,0" VerticalAlignment="Top" Width="224" RenderTransformOrigin="-0.21,0.08" Background="White"/>
 		</Grid>
-		<Button Content="Starta Spel" HorizontalAlignment="Left" Margin="70,45,0,0" VerticalAlignment="Top" Height="103" Width="181"/>
+		<Button x:ConnectionId='1' Name="StartButton"                   Content="Starta Spel" HorizontalAlignment="Left" Margin="70,45,0,0" VerticalAlignment="Top" Height="103" Width="181"/>
 	</Grid>
 </UserControl>
 

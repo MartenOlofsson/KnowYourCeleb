@@ -27,3 +27,12 @@ c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\Controls\Normal.xaml
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\Controls\Snapped.g.i.cs
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\Controls\Snapped.g.cs
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\Controls\Snapped.xaml
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCelebCore.dll
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCelebCore.pdb
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCelebCore.pri
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\KnowYourCeleb.csprojResolveAssemblyReference.cache
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\KnowYourCeleb.csproj.GenerateResource.Cache
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\priconfig.xml.intermediate
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\layout.resfiles.intermediate
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\resources.resfiles.intermediate
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\obj\Debug\pri.resfiles.intermediate

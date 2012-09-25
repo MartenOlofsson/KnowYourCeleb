@@ -16,25 +16,105 @@
     <AppXManifest Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-24T21:48:32.499</Modified>
+      <Modified>2012-09-24T22:26:41.813</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.exe">
       <PackagePath>KnowYourCeleb.exe</PackagePath>
-      <Modified>2012-09-24T21:56:18.386</Modified>
+      <Modified>2012-09-25T17:35:18.046</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.pdb">
       <PackagePath>KnowYourCeleb.pdb</PackagePath>
-      <Modified>2012-09-24T21:56:18.375</Modified>
+      <Modified>2012-09-25T17:35:17.785</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.pdb">
+      <PackagePath>KnowYourCelebCore.pdb</PackagePath>
+      <Modified>2012-09-24T22:34:03.751</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.dll">
+      <PackagePath>KnowYourCelebCore.dll</PackagePath>
+      <Modified>2012-09-24T22:34:03.763</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\ladygaga.jpg">
       <PackagePath>Assets\ladygaga.jpg</PackagePath>
       <Modified>2012-09-23T08:06:08.535</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\adrienbrody.jpg">
+      <PackagePath>Controls\adrienbrody.jpg</PackagePath>
+      <Modified>2012-09-23T00:50:14.954</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\akon.jpg">
+      <PackagePath>Controls\akon.jpg</PackagePath>
+      <Modified>2012-09-23T08:09:51.010</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\aliciakeys.jpg">
+      <PackagePath>Controls\aliciakeys.jpg</PackagePath>
+      <Modified>2012-09-23T08:10:06.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\angelastanford.jpg">
+      <PackagePath>Controls\angelastanford.jpg</PackagePath>
+      <Modified>2012-09-23T00:02:08.556</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\bobmarley.jpg">
+      <PackagePath>Controls\bobmarley.jpg</PackagePath>
+      <Modified>2012-09-23T08:07:48.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\bono.jpg">
+      <PackagePath>Controls\bono.jpg</PackagePath>
+      <Modified>2012-09-23T08:10:35.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\carmenelectra.jpg">
+      <PackagePath>Controls\carmenelectra.jpg</PackagePath>
+      <Modified>2012-09-22T23:58:23.228</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\eminem.jpg">
+      <PackagePath>Controls\eminem.jpg</PackagePath>
+      <Modified>2012-09-22T23:56:37.107</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\emmawatson.jpg">
+      <PackagePath>Controls\emmawatson.jpg</PackagePath>
+      <Modified>2012-09-23T00:49:45.279</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\fergie.jpg">
+      <PackagePath>Controls\fergie.jpg</PackagePath>
+      <Modified>2012-09-23T08:05:14.569</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\giselebundchen.jpg">
+      <PackagePath>Controls\giselebundchen.jpg</PackagePath>
+      <Modified>2012-09-23T08:06:59.371</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\hilaryduff.jpg">
+      <PackagePath>Controls\hilaryduff.jpg</PackagePath>
+      <Modified>2012-09-23T08:08:50.865</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\johncena.jpg">
+      <PackagePath>Controls\johncena.jpg</PackagePath>
+      <Modified>2012-09-22T23:59:50.153</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\katehudson.jpg">
+      <PackagePath>Controls\katehudson.jpg</PackagePath>
+      <Modified>2012-09-22T23:58:56.190</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\kellanlutz.jpg">
+      <PackagePath>Controls\kellanlutz.jpg</PackagePath>
+      <Modified>2012-09-23T00:00:13.808</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\ladygaga.jpg">
       <PackagePath>Controls\ladygaga.jpg</PackagePath>
-      <Modified>2012-09-24T21:48:18.592</Modified>
+      <Modified>2012-09-23T08:06:08.535</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\lebronjames.jpg">
+      <PackagePath>Controls\lebronjames.jpg</PackagePath>
+      <Modified>2012-09-23T00:01:17.875</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\nopicture.JPG">
+      <PackagePath>Controls\nopicture.JPG</PackagePath>
+      <Modified>2012-09-22T21:55:52.339</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\selenagomez.jpg">
+      <PackagePath>Controls\selenagomez.jpg</PackagePath>
+      <Modified>2012-09-22T23:57:50.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -66,11 +146,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\Controls\Normal.xaml">
       <PackagePath>Controls\Normal.xaml</PackagePath>
-      <Modified>2012-09-24T21:55:48.959</Modified>
+      <Modified>2012-09-25T10:21:10.878</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\Controls\Snapped.xaml">
       <PackagePath>Controls\Snapped.xaml</PackagePath>
-      <Modified>2012-09-24T21:30:52.021</Modified>
+      <Modified>2012-09-25T16:48:31.404</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
@@ -78,7 +158,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-09-24T21:48:32.442</Modified>
+      <Modified>2012-09-24T22:26:41.753</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

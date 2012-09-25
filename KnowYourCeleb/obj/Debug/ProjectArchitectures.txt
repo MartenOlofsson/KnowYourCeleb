@@ -1,1 +1,2 @@
 c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\KnowYourCeleb.csproj;neutral
+c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\KnowYourCelebCore.csproj;neutral

@@ -19,11 +19,71 @@
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.pdb">
       <PackagePath>KnowYourCeleb.pdb</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.pdb">
+      <PackagePath>KnowYourCelebCore.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.dll">
+      <PackagePath>KnowYourCelebCore.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\ladygaga.jpg">
       <PackagePath>Assets\ladygaga.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\adrienbrody.jpg">
+      <PackagePath>Controls\adrienbrody.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\akon.jpg">
+      <PackagePath>Controls\akon.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\aliciakeys.jpg">
+      <PackagePath>Controls\aliciakeys.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\angelastanford.jpg">
+      <PackagePath>Controls\angelastanford.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\bobmarley.jpg">
+      <PackagePath>Controls\bobmarley.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\bono.jpg">
+      <PackagePath>Controls\bono.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\carmenelectra.jpg">
+      <PackagePath>Controls\carmenelectra.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\eminem.jpg">
+      <PackagePath>Controls\eminem.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\emmawatson.jpg">
+      <PackagePath>Controls\emmawatson.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\fergie.jpg">
+      <PackagePath>Controls\fergie.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\giselebundchen.jpg">
+      <PackagePath>Controls\giselebundchen.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\hilaryduff.jpg">
+      <PackagePath>Controls\hilaryduff.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\johncena.jpg">
+      <PackagePath>Controls\johncena.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\katehudson.jpg">
+      <PackagePath>Controls\katehudson.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\kellanlutz.jpg">
+      <PackagePath>Controls\kellanlutz.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\ladygaga.jpg">
       <PackagePath>Controls\ladygaga.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\lebronjames.jpg">
+      <PackagePath>Controls\lebronjames.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\nopicture.JPG">
+      <PackagePath>Controls\nopicture.JPG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Controls\selenagomez.jpg">
+      <PackagePath>Controls\selenagomez.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
