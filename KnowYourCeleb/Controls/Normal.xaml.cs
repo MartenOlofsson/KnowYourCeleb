@@ -161,9 +161,9 @@ namespace KnowYourCeleb.Controls
 				return 0;
 
 			if(correctAnswer)
-				return 40;
+				return 70;
 
-			return -30;
+			return -80;
 		}
 
 		private void SetButtonValues(Celebrity celeb)
@@ -201,15 +201,14 @@ namespace KnowYourCeleb.Controls
 			
 			//DefeatedGame.IsOpen = true;
 			GameButtons.Visibility = Visibility.Collapsed;
-			var message = winner ? "Du kan allt om kändisar" : "Du tog dig inte riktigt ända fram, testa igen!";
+			var message = winner ? "Du kan allt om kändisar." : "Du tog dig inte riktigt ända fram, testa igen!";
 			var elementsInList = _celebrityList.Count;
 			if (elementsInList == 0)
 				elementsInList = 1;
 
 
-			var points = winner ? ((_timecounter * 50 + 4000*_difficultyLevel) / elementsInList).ToString() : (4000 / elementsInList*_difficultyLevel).ToString();
+			var points = winner ? ((_timecounter * 50 + 4000 * _difficultyLevel) / elementsInList).ToString() : ((4000 / elementsInList) * _difficultyLevel).ToString();
 			var mes = new MessageDialog(message + " Din Poäng blev: " + points, "Game Over");
-
 			mes.ShowAsync();
 			GameButtons.Visibility = Visibility.Collapsed;
 			Dispose();

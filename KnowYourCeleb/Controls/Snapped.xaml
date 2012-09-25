@@ -12,14 +12,10 @@
 				<ColumnDefinition Width="109*"/>
 				<ColumnDefinition Width="102*"/>
 			</Grid.ColumnDefinitions>
-			<RadioButton Name="RadioRookie" Content="Nybörjare" IsChecked="True" HorizontalAlignment="Left" Margin="41,131,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+			<RadioButton Name="RadioRookie" Content="Nybörjare" HorizontalAlignment="Left" Margin="41,131,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
 			<RadioButton Name="RadioExpert" Content="Expert" Margin="41,165,13,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
 			<Button x:Name="StartButton" Click="StartGame" Content="Starta Spel" HorizontalAlignment="Center" Margin="41,59,46,0" VerticalAlignment="Top" Height="47" Width="123" Grid.ColumnSpan="2"/>
-			<TextBlock FontSize="24" HorizontalAlignment="Center" Margin="13,15,10,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.093,0.667" Height="32" Width="187" Grid.ColumnSpan="2">
-				<Run Text="Känn din"/>
-				<Run Text=" "/>
-				<Run Text="kändis"/>
-			</TextBlock>
+			<TextBlock FontSize="24" HorizontalAlignment="Center" Margin="13,15,10,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.093,0.667" Height="32" Width="187" Grid.ColumnSpan="2" Text="Känn din kändis"/>
 		</Grid>
 		<Grid Name="GameButtons" HorizontalAlignment="Left" Height="311" Margin="19,529,0,-40" VerticalAlignment="Top" Width="291">
 			<Button Width="200" Name="First" Click="FirstButton" Content="Button" HorizontalAlignment="Left" Margin="44,73,0,0" VerticalAlignment="Top"/>

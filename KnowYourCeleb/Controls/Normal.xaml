@@ -14,7 +14,7 @@
 	<Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" UseLayoutRounding="True" Margin="-36,-230,-333,-141">
 		<Grid HorizontalAlignment="Left" Height="352" Margin="75,130,0,0" VerticalAlignment="Top" Width="222">
 			<Button Name="StartButton" Click="StartGame" Content="Starta spel" HorizontalAlignment="Left" Margin="44,139,0,0" VerticalAlignment="Top" Height="86" Width="126"/>
-			<RadioButton IsChecked="True" Name="RadioRookie" Content="Nybörjare" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top"/>
+			<RadioButton Name="RadioRookie" Content="Nybörjare" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top"/>
 			<RadioButton Name="RadioExpert" Content="Expert" HorizontalAlignment="Left" Margin="25,59,0,0" VerticalAlignment="Top"/>
 			<Rectangle Name="Rektangle" Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="22" Margin="0,282,12,48" Stroke="Black" VerticalAlignment="Center" Width="200"/>
 		</Grid>
@@ -31,9 +31,9 @@
 			<Canvas x:Name="MainCanvas" HorizontalAlignment="Left" Height="250" Margin="10,87,0,0" VerticalAlignment="Top" Width="250" Background="White" Grid.Column="1"/>
 			<Grid x:Name="GameButtons" HorizontalAlignment="Left" Height="214" VerticalAlignment="Top" Width="280" Margin="0,384,0,0" Grid.Column="1">
 				<Button Click="FirstButton" Width="170" x:Name="First" Content="Button" HorizontalAlignment="Left" Margin="59,10,0,0" VerticalAlignment="Top"/>
-				<Button Click="SecondButton" Width="170" x:Name="Second" Content="Button" HorizontalAlignment="Left" Margin="59,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,0.382"/>
-				<Button Click="ThirdButton" Width="170" x:Name="Third" Content="Button" HorizontalAlignment="Left" Margin="59,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.921,1.197"/>
-				<Button Click="FourthButton"  Width="170" x:Name="Fourth"  Content="Button" HorizontalAlignment="Left" Margin="59,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,1.553"/>
+				<Button Click="SecondButton" Width="170" x:Name="Second" Content="Button" HorizontalAlignment="Left" Margin="59,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,0.382"/>
+				<Button Click="ThirdButton" Width="170" x:Name="Third" Content="Button" HorizontalAlignment="Left" Margin="59,102,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.921,1.197"/>
+				<Button Click="FourthButton"  Width="170" x:Name="Fourth"  Content="Button" HorizontalAlignment="Left" Margin="59,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,1.553"/>
 			</Grid>
 		</Grid>
 	</Grid>
