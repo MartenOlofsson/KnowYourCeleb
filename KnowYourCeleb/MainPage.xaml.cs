@@ -72,5 +72,11 @@ namespace KnowYourCeleb
 			
 
 		}
+
+		private void NormalView_Loaded(object sender, RoutedEventArgs e)
+		{
+
+		}
+
     }
 }

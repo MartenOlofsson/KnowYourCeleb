@@ -80,7 +80,6 @@ namespace KnowYourCeleb.Controls
 			var times = TimeSpan.FromMilliseconds(10);
 			_timer.Interval = times;
 			_timecounter = 400;
-			RadioRookie.IsChecked = true;
 			Rektangle.Width = 200;
 			StartButton.IsEnabled = true;
 			_currentCeleb = string.Empty;
@@ -98,7 +97,6 @@ namespace KnowYourCeleb.Controls
 			{
 				MainCanvas.Children.Add(pixel);
 			}
-			RadioRookie.IsChecked = true;
 		}
 
 		private void FirstButton(object sender, RoutedEventArgs e)
@@ -186,6 +184,8 @@ namespace KnowYourCeleb.Controls
 			HandleClick(string.Empty, true);
 			GameButtons.Visibility = Visibility.Visible;
 			StartButton.IsEnabled = false;
+			RadioRookie.IsEnabled = false;
+			RadioExpert.IsEnabled = false;
 			_difficultyLevel = RadioExpert.IsChecked == true ? 4 : 2;
 			_timer.Start();
 
@@ -204,8 +204,6 @@ namespace KnowYourCeleb.Controls
 			var mes = new MessageDialog(message + " Din Poäng blev: " + points, "Game Over");
 			mes.ShowAsync();
 			SetupGame();
-			
-
 		}
 		
 		private void UpdateProgress()
@@ -232,6 +230,8 @@ namespace KnowYourCeleb.Controls
 			_timer.Tick -= TimerTick;
 			GameButtons.Visibility = Visibility.Collapsed;
 			StartButton.IsEnabled = true;
+			RadioRookie.IsEnabled = true;
+			RadioExpert.IsEnabled = true;
 			SetImage("nopicture.jpg");
 		}
 	}

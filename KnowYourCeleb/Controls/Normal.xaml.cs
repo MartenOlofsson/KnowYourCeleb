@@ -54,7 +54,6 @@ namespace KnowYourCeleb.Controls
 		public Normal()
 		{
 			InitializeComponent();
-			RadioRookie.IsChecked = true;
 			Setup();
 			SetupGame();
 		}
@@ -90,9 +89,6 @@ namespace KnowYourCeleb.Controls
 			_celebrityList = CelebrityHandler.GetAllCelebs();
 			_celebrityList = Helper.Shuffle(_celebrityList);
 			_allcelebrityList = CelebrityHandler.GetAllCelebs();
-			
-			
-			
 		}
 
 		private void Setup()
@@ -196,6 +192,8 @@ namespace KnowYourCeleb.Controls
 			StartButton.IsEnabled = false;
 			_difficultyLevel = RadioExpert.IsChecked == true ? 4 : 2;
 			_timer.Start();
+			RadioRookie.IsEnabled = false;
+			RadioExpert.IsEnabled = false;
 		}
 
 		private void CompletedTheGame(bool winner)
@@ -243,6 +241,8 @@ namespace KnowYourCeleb.Controls
 			_timer.Stop();
 			_timer.Tick -= TimerTick;
 			StartButton.IsEnabled = true;
+			RadioRookie.IsEnabled = true;
+			RadioExpert.IsEnabled = true;
 			SetupGame();
 			SetImage("nopicture.jpg");
 		}
