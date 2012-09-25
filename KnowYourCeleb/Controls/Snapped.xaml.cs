@@ -16,7 +16,6 @@ namespace KnowYourCeleb.Controls
 {
 	public sealed partial class Snapped : UserControl
 	{
-
 		public event EventHandler Changed;
 		private DispatcherTimer _timer;
 		private List<Celebrity> _allcelebrityList;
@@ -148,7 +147,6 @@ namespace KnowYourCeleb.Controls
 				}
 			}
 			UpdateProgress();
-
 		}
 
 		private int CalculateProgress(bool start, bool correctAnswer)
@@ -195,8 +193,6 @@ namespace KnowYourCeleb.Controls
 
 		private void CompletedTheGame(bool winner)
 		{
-			
-			//DefeatedGame.IsOpen = true;
 			GameButtons.Visibility = Visibility.Collapsed;
 			string message = winner ? "Du kan allt om kändisar" : "Du tog dig inte riktigt ända fram, testa igen!";
 			var elementsInList = _celebrityList.Count;
@@ -205,10 +201,8 @@ namespace KnowYourCeleb.Controls
 
 			Dispose();
 			var points = winner ? ((_timecounter * 50 + 4000 * _difficultyLevel) / elementsInList).ToString() : (4000 / elementsInList * _difficultyLevel).ToString();
-			var mes = new MessageDialog(message + " Din Poäng blev: " + points);
-
+			var mes = new MessageDialog(message + " Din Poäng blev: " + points, "Game Over");
 			mes.ShowAsync();
-			
 			SetupGame();
 			
 
@@ -230,21 +224,7 @@ namespace KnowYourCeleb.Controls
 
 		private void LoadPixels()
 		{
-			_pixelList = new List<Rectangle>();
-
-			for (int i = 0; i < 250; i += 25)
-			{
-				for (int j = 0; j < 250; j += 25)
-				{
-					_pixelList.Add(new Rectangle
-					{
-						Margin = new Thickness(i, j, 0, 0),
-						Width = 30,
-						Height = 30,
-						Fill = new SolidColorBrush(Colors.White)
-					});
-				}
-			}
+			_pixelList = Helper.GetPixelList();
 		}
 
 		public void Dispose(){

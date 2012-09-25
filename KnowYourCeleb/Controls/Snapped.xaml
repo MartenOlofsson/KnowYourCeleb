@@ -7,21 +7,34 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Height="800" Width="320">
 	<Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" UseLayoutRounding="True">
-		<Grid HorizontalAlignment="Left" Height="160" Margin="50,148,0,0" VerticalAlignment="Top" Width="222">
-			<RadioButton Name="RadioRookie" Content="RadioButton" HorizontalAlignment="Left" Margin="41,50,0,0" VerticalAlignment="Top"/>
-			<RadioButton Name="RadioExpert" Content="RadioButton" Margin="41,84,13,0" VerticalAlignment="Top"/>
+		<Grid HorizontalAlignment="Left" Height="298" Margin="51,19,0,0" VerticalAlignment="Top" Width="210">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="109*"/>
+				<ColumnDefinition Width="102*"/>
+			</Grid.ColumnDefinitions>
+			<RadioButton Name="RadioRookie" Content="Nybörjare" HorizontalAlignment="Left" Margin="41,131,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+			<RadioButton Name="RadioExpert" Content="Expert" Margin="41,165,13,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+			<Button x:Name="StartButton" Click="StartGame" Content="Starta Spel" HorizontalAlignment="Center" Margin="41,59,46,0" VerticalAlignment="Top" Height="47" Width="123" Grid.ColumnSpan="2"/>
+			<TextBlock FontSize="24" HorizontalAlignment="Center" Margin="13,15,10,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.093,0.667" Height="32" Width="187" Grid.ColumnSpan="2">
+				<Run Text="Känn din"/>
+				<Run Text=" "/>
+				<Run Text="kändis"/>
+			</TextBlock>
 		</Grid>
 		<Grid Name="GameButtons" HorizontalAlignment="Left" Height="311" Margin="19,529,0,-40" VerticalAlignment="Top" Width="291">
 			<Button Width="170" Name="First" Click="FirstButton" Content="Button" HorizontalAlignment="Left" Margin="59,63,0,0" VerticalAlignment="Top"/>
 			<Button Width="170" Name="Second" Click="SecondButton" Content="Button" HorizontalAlignment="Left" Margin="59,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,0.382"/>
 			<Button Width="170" Name="Third" Click="ThirdButton" Content="Button" HorizontalAlignment="Left" Margin="59,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.921,1.197"/>
 			<Button Width="170" Name="Fourth" Click="FourthButton" Content="Button" HorizontalAlignment="Left" Margin="59,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,1.553"/>
-			<Rectangle Name="Rektangle" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="42" Margin="59,10,62,259" Stroke="Black" VerticalAlignment="Center" Width="170"/>
+			<Rectangle Name="Rektangle" Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="48" Margin="0,4,47,259" Stroke="Black" VerticalAlignment="Center" Width="200"/>
 		</Grid>
 		<Grid HorizontalAlignment="Left" Height="305" Margin="10,219,-84,0" VerticalAlignment="Top" Width="385">
-			<Canvas x:Name="MainCanvas" HorizontalAlignment="Left" Height="237" Margin="40,64,0,0" VerticalAlignment="Top" Width="224" RenderTransformOrigin="-0.21,0.08" Background="White"/>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="58*"/>
+				<ColumnDefinition Width="327*"/>
+			</Grid.ColumnDefinitions>
+			<Canvas x:Name="MainCanvas" HorizontalAlignment="Left" Height="237" Margin="34,32,0,0" VerticalAlignment="Top" Width="224" RenderTransformOrigin="-0.21,0.08" Background="White" Grid.ColumnSpan="2"/>
 		</Grid>
-		<Button Name="StartButton" Click="StartGame" Content="Starta Spel" HorizontalAlignment="Left" Margin="70,45,0,0" VerticalAlignment="Top" Height="103" Width="181"/>
 	</Grid>
 </UserControl>
 

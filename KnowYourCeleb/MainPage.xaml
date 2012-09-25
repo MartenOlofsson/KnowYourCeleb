@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-		<UserControls:Normal x:Name="NormalView" Changed="NormalView_Changed" Margin="198,148,446,388" />
+		<UserControls:Normal x:Name="NormalView" Changed="NormalView_Changed" Margin="314,264,330,272" />
 		<UserControls:Snapped x:Name="SnappedView" Visibility="Collapsed" Changed="SnappedView_Changed" />
 	</Grid>
 </Page>

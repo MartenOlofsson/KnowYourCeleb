@@ -210,15 +210,11 @@ namespace KnowYourCeleb.Controls
 
 
 			var points = winner ? ((_timecounter * 50 + 4000*_difficultyLevel) / elementsInList).ToString() : (4000 / elementsInList*_difficultyLevel).ToString();
-			var mes = new MessageDialog(message + " Din Poäng blev: " + points);
-			
+			var mes = new MessageDialog(message + " Din Poäng blev: " + points, "Game Over");
+
 			mes.ShowAsync();
 			GameButtons.Visibility = Visibility.Collapsed;
-			Dispose();_timer.Stop();
-			_timer.Tick -= TimerTick;
-			StartButton.IsEnabled = true;
-			SetupGame();
-			SetImage("nopicture.jpg");
+			Dispose();
 
 		}
 
@@ -238,21 +234,8 @@ namespace KnowYourCeleb.Controls
 
 		private void LoadPixels()
 		{
-			_pixelList = new List<Rectangle>();
+			_pixelList = Helper.GetPixelList();
 
-			for (int i = 0; i < 250; i += 25)
-			{
-				for (int j = 0; j < 250; j += 25)
-				{
-					_pixelList.Add(new Rectangle
-					{
-						Margin = new Thickness(i, j, 0, 0),
-						Width = 30,
-						Height = 30,
-						Fill = new SolidColorBrush(Colors.White)
-					});
-				}
-			}
 		}
 
 		public void Dispose()
@@ -260,6 +243,8 @@ namespace KnowYourCeleb.Controls
 			_timer.Stop();
 			_timer.Tick -= TimerTick;
 			StartButton.IsEnabled = true;
+			SetupGame();
+			SetImage("nopicture.jpg");
 		}
 
 		

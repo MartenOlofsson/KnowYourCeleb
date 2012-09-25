@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Windows.UI;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Xaml.Shapes;
 
 namespace KnowYourCelebCore
 {
@@ -29,5 +32,23 @@ namespace KnowYourCelebCore
 			}
 			return list;
 		}
-	}
-}
+
+		public static List<Rectangle> GetPixelList()
+		{
+			var pixelList = new List<Rectangle>();
+			for (int i = 0; i < 250; i += 25)
+			{
+				for (int j = 0; j < 250; j += 25)
+				{
+					pixelList.Add(new Rectangle
+					{
+						Margin = new Thickness(i, j, 0, 0),
+						Width = 30,
+						Height = 30,
+						Fill = new SolidColorBrush(Colors.White)
+					});
+				}
+			} 
+			return pixelList;
+		}
+}}

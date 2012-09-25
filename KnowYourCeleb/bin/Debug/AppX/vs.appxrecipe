@@ -22,19 +22,19 @@
   <ItemGroup>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.exe">
       <PackagePath>KnowYourCeleb.exe</PackagePath>
-      <Modified>2012-09-25T17:35:18.046</Modified>
+      <Modified>2012-09-25T18:11:46.042</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.pdb">
       <PackagePath>KnowYourCeleb.pdb</PackagePath>
-      <Modified>2012-09-25T17:35:17.785</Modified>
+      <Modified>2012-09-25T18:11:45.842</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.pdb">
       <PackagePath>KnowYourCelebCore.pdb</PackagePath>
-      <Modified>2012-09-24T22:34:03.751</Modified>
+      <Modified>2012-09-25T17:40:16.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.dll">
       <PackagePath>KnowYourCelebCore.dll</PackagePath>
-      <Modified>2012-09-24T22:34:03.763</Modified>
+      <Modified>2012-09-25T17:40:16.591</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\Assets\ladygaga.jpg">
       <PackagePath>Assets\ladygaga.jpg</PackagePath>
@@ -146,15 +146,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\Controls\Normal.xaml">
       <PackagePath>Controls\Normal.xaml</PackagePath>
-      <Modified>2012-09-25T10:21:10.878</Modified>
+      <Modified>2012-09-25T17:59:22.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\Controls\Snapped.xaml">
       <PackagePath>Controls\Snapped.xaml</PackagePath>
-      <Modified>2012-09-25T16:48:31.404</Modified>
+      <Modified>2012-09-25T17:50:16.683</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2012-09-24T21:56:16.488</Modified>
+      <Modified>2012-09-25T18:01:36.805</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
