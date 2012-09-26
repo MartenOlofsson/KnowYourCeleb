@@ -25,12 +25,6 @@ namespace KnowYourCeleb.Controls
 		private int _difficultyLevel = 2;
 		private List<Rectangle> _pixelList;
 
-		public Snapped()
-		{
-			InitializeComponent();
-			SetupGame();
-		}
-
 		private void SetImage(string path)
 		{
 			var imageIcon = new Image();
@@ -50,7 +44,12 @@ namespace KnowYourCeleb.Controls
 			return result;
 		}
 
-		
+		public Snapped()
+		{
+			InitializeComponent();
+			Setup();
+			SetupGame();
+		}
 
 		private void TimerTick(object sender, object e)
 		{
@@ -79,24 +78,24 @@ namespace KnowYourCeleb.Controls
 			_timer.Tick += TimerTick;
 			var times = TimeSpan.FromMilliseconds(10);
 			_timer.Interval = times;
-			_timecounter = 400;
-			Rektangle.Width = 200;
-			StartButton.IsEnabled = true;
 			_currentCeleb = string.Empty;
 			_celebrityList = CelebrityHandler.GetAllCelebs();
 			_celebrityList = Helper.Shuffle(_celebrityList);
 			_allcelebrityList = CelebrityHandler.GetAllCelebs();
-			GameButtons.Visibility = Visibility.Collapsed;
-			SetImage("nopicture.jpg");
 		}
 
 		private void Setup()
-		{	
+		{
+			_timecounter = 400;
+			Rektangle.Width = 200;
+			StartButton.IsEnabled = true;
+			GameButtons.Visibility = Visibility.Collapsed;
 			LoadPixels();
 			foreach (Rectangle pixel in _pixelList)
 			{
 				MainCanvas.Children.Add(pixel);
 			}
+			SetImage("nopicture.jpg");
 		}
 
 		private void FirstButton(object sender, RoutedEventArgs e)
@@ -137,6 +136,7 @@ namespace KnowYourCeleb.Controls
 				_currentCeleb = celeb.Name;
 				_celebrityList.RemoveAt(randomNumber);
 				SetButtonValues(celeb);
+				
 				SetImage(celeb.Image);
 				
 				foreach (Rectangle pixel in _pixelList)
@@ -145,6 +145,7 @@ namespace KnowYourCeleb.Controls
 				}
 			}
 			UpdateProgress();
+
 		}
 
 		private int CalculateProgress(bool start, bool correctAnswer)
@@ -177,38 +178,39 @@ namespace KnowYourCeleb.Controls
 			Fourth.Content = celebsWithSameGender[3].Name;
 		}
 
-	
 		private void StartGame(object sender, RoutedEventArgs e)
 		{
-			
 			HandleClick(string.Empty, true);
 			GameButtons.Visibility = Visibility.Visible;
 			StartButton.IsEnabled = false;
-			RadioRookie.IsEnabled = false;
-			RadioExpert.IsEnabled = false;
 			_difficultyLevel = RadioExpert.IsChecked == true ? 4 : 2;
 			_timer.Start();
-
+			RadioRookie.IsEnabled = false;
+			RadioExpert.IsEnabled = false;
 		}
 
 		private void CompletedTheGame(bool winner)
 		{
+			
+			//DefeatedGame.IsOpen = true;
 			GameButtons.Visibility = Visibility.Collapsed;
-			string message = winner ? "Du kan allt om kändisar." : "Du tog dig inte riktigt ända fram, testa igen!";
+			var message = winner ? "Du kan allt om kändisar." : "Du tog dig inte riktigt ända fram, testa igen!";
 			var elementsInList = _celebrityList.Count;
 			if (elementsInList == 0)
 				elementsInList = 1;
 
-			var points = winner ? ((_timecounter * 50 + 4000 * _difficultyLevel) / elementsInList).ToString() : ((4000 / elementsInList )* _difficultyLevel).ToString();
+
+			var points = winner ? ((_timecounter * 50 + 4000 * _difficultyLevel) / elementsInList).ToString() : ((4000 / elementsInList) * _difficultyLevel).ToString();
 			var mes = new MessageDialog(message + " Din Poäng blev: " + points, "Game Over");
 			mes.ShowAsync();
-			SetupGame();
+			GameButtons.Visibility = Visibility.Collapsed;
 			Dispose();
+
 		}
+
 		
 		private void UpdateProgress()
 		{
-
 			try
 			{
 				Rektangle.Width = _timecounter/2;
@@ -223,15 +225,16 @@ namespace KnowYourCeleb.Controls
 		private void LoadPixels()
 		{
 			_pixelList = Helper.GetPixelList();
-		}
 
-		public void Dispose(){
+		}
+		public void Dispose()
+		{
 			_timer.Stop();
 			_timer.Tick -= TimerTick;
-			GameButtons.Visibility = Visibility.Collapsed;
 			StartButton.IsEnabled = true;
 			RadioRookie.IsEnabled = true;
 			RadioExpert.IsEnabled = true;
+			SetupGame();
 			SetImage("nopicture.jpg");
 		}
 	}
