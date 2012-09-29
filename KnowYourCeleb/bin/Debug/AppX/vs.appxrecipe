@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.exe">
       <PackagePath>KnowYourCeleb.exe</PackagePath>
-      <Modified>2012-09-26T21:30:09.410</Modified>
+      <Modified>2012-09-28T16:25:08.226</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\KnowYourCeleb.pdb">
       <PackagePath>KnowYourCeleb.pdb</PackagePath>
-      <Modified>2012-09-26T21:30:09.396</Modified>
+      <Modified>2012-09-28T16:25:08.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCelebCore\bin\Debug\KnowYourCelebCore.pdb">
       <PackagePath>KnowYourCelebCore.pdb</PackagePath>
@@ -290,7 +290,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\Controls\Normal.xaml">
       <PackagePath>Controls\Normal.xaml</PackagePath>
-      <Modified>2012-09-25T19:41:22.838</Modified>
+      <Modified>2012-09-28T15:00:26.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\HobbyProjekt\KnowYourCeleb\KnowYourCeleb\bin\Debug\Controls\Snapped.xaml">
       <PackagePath>Controls\Snapped.xaml</PackagePath>

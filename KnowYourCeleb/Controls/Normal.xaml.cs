@@ -5,6 +5,8 @@ using System.Linq;
 using KnowYourCelebCore;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -31,6 +33,8 @@ namespace KnowYourCeleb.Controls
 		private int _timecounter;
 		private int _difficultyLevel = 2;
 		private List<Rectangle> _pixelList;
+		private int _highScore;
+
 
 		private void SetImage(string path)
 		{
@@ -53,8 +57,9 @@ namespace KnowYourCeleb.Controls
 
 		public Normal()
 		{
+			LoadHighScore();
 			InitializeComponent();
-			Setup();
+			Setup(); 
 			SetupGame();
 		}
 
@@ -78,6 +83,7 @@ namespace KnowYourCeleb.Controls
 			}
 		}
 
+		
 		public void SetupGame()
 		{	
 			Setup();
@@ -206,15 +212,66 @@ namespace KnowYourCeleb.Controls
 			if (elementsInList == 0)
 				elementsInList = 1;
 
+			var winnerPoints = (_timecounter*50 + 4000*_difficultyLevel)/elementsInList;
+			var looserPoints = ((4000/elementsInList)*_difficultyLevel);
+			var points = winner ? winnerPoints : looserPoints;
+			
+			
+			if(points > _highScore)
+			{
+				HighScore.Text = points.ToString();
+				_highScore = points;
+				SaveHighScore(points);
+			}
 
-			var points = winner ? ((_timecounter * 50 + 4000 * _difficultyLevel) / elementsInList).ToString() : ((4000 / elementsInList) * _difficultyLevel).ToString();
-			var mes = new MessageDialog(message + " Din Poäng blev: " + points, "Game Over");
+			var mes = new MessageDialog(message + " Din Poäng blev: " + points.ToString(), "Game Over");
 			mes.ShowAsync();
 			GameButtons.Visibility = Visibility.Collapsed;
 			Dispose();
 
 		}
 
+		async void LoadHighScore()
+		{	
+
+			
+			Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+
+			
+			var currentHighScore = ApplicationData.Current.LocalFolder;
+			try
+			{	
+				var file = await currentHighScore.GetFileAsync("highscore.txt");
+				var text = FileIO.ReadTextAsync(file, UnicodeEncoding.Utf8);
+
+				var high = _highScore;
+				int.TryParse(text.GetResults(), out high);
+				_highScore = high;
+				HighScore.Text = _highScore.ToString();
+				
+				var hej = new AsyncCallback(Target);
+				hej.BeginInvoke(hej, Target, object);
+			}
+			catch (Exception)
+			{
+
+				_highScore = 0;
+			}
+			
+
+		}
+
+		private void Target(IAsyncResult ar)
+		{
+			HighScore.Text = _highScore.ToString();
+		}
+
+		async void SaveHighScore(int points)
+		{
+			var localFolder = ApplicationData.Current.LocalFolder;
+			var file = await localFolder.CreateFileAsync("highscore.txt", CreationCollisionOption.ReplaceExisting);
+			await FileIO.WriteTextAsync(file, points.ToString());
+		}
 		
 		private void UpdateProgress()
 		{
