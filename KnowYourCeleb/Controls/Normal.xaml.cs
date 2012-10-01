@@ -1,22 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using KnowYourCelebCore;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Storage;
-using Windows.Storage.Streams;
-using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
@@ -25,15 +15,24 @@ namespace KnowYourCeleb.Controls
 {
 	public sealed partial class Normal : UserControl
 	{
-		public event EventHandler Changed;
-		private DispatcherTimer _timer;
 		private List<Celebrity> _allcelebrityList;
 		private List<Celebrity> _celebrityList;
 		private string _currentCeleb;
-		private int _timecounter;
 		private int _difficultyLevel = 2;
-		private List<Rectangle> _pixelList;
 		private int _highScore;
+		private List<Rectangle> _pixelList;
+		private int _timecounter;
+		private DispatcherTimer _timer;
+
+		public Normal()
+		{
+			InitializeComponent();
+			LoadHighScore();
+			Setup();
+			SetupGame();
+		}
+
+		public event EventHandler Changed;
 
 
 		private void SetImage(string path)
@@ -55,18 +54,10 @@ namespace KnowYourCeleb.Controls
 			return result;
 		}
 
-		public Normal()
-		{
-			LoadHighScore();
-			InitializeComponent();
-			Setup(); 
-			SetupGame();
-		}
-
 		private void TimerTick(object sender, object e)
 		{
 			_timecounter -= _difficultyLevel/2;
-			if(_timecounter < 0)
+			if (_timecounter < 0)
 			{
 				CompletedTheGame(false);
 			}
@@ -83,13 +74,14 @@ namespace KnowYourCeleb.Controls
 			}
 		}
 
-		
+
 		public void SetupGame()
-		{	
+		{
 			Setup();
+			LoadHighScore();
 			_timer = new DispatcherTimer();
 			_timer.Tick += TimerTick;
-			var times = TimeSpan.FromMilliseconds(10);
+			TimeSpan times = TimeSpan.FromMilliseconds(10);
 			_timer.Interval = times;
 			_currentCeleb = string.Empty;
 			_celebrityList = CelebrityHandler.GetAllCelebs();
@@ -128,48 +120,47 @@ namespace KnowYourCeleb.Controls
 
 		private void FourthButton(object sender, RoutedEventArgs e)
 		{
-			HandleClick(Fourth.Content.ToString(),false);
+			HandleClick(Fourth.Content.ToString(), false);
 		}
 
 		private void HandleClick(string answer, bool start)
-		{	
+		{
 			LoadPixels();
 			if (_celebrityList.Count == 0)
 			{
 				CompletedTheGame(true);
 			}
-			else 
+			else
 			{
-				var correctAnswer = answer.ToLower() == _currentCeleb.ToLower();
-				var updateTime = CalculateProgress(start, correctAnswer);
-				_timecounter += updateTime;				
+				bool correctAnswer = answer.ToLower() == _currentCeleb.ToLower();
+				int updateTime = CalculateProgress(start, correctAnswer);
+				_timecounter += updateTime;
 				var randomizer = new Random();
 				int randomNumber = randomizer.Next(0, _celebrityList.Count);
 				Celebrity celeb = _celebrityList[randomNumber];
 				_currentCeleb = celeb.Name;
 				_celebrityList.RemoveAt(randomNumber);
 				SetButtonValues(celeb);
-				
+
 				SetImage(celeb.Image);
-				
+
 				foreach (Rectangle pixel in _pixelList)
 				{
 					MainCanvas.Children.Add(pixel);
 				}
 			}
 			UpdateProgress();
-
 		}
 
 		private int CalculateProgress(bool start, bool correctAnswer)
 		{
-			if(start)
+			if (start)
 				return 0;
 
-			if(correctAnswer)
+			if (correctAnswer)
 				return 70;
 
-			return -80;
+			return -90;
 		}
 
 		private void SetButtonValues(Celebrity celeb)
@@ -177,10 +168,10 @@ namespace KnowYourCeleb.Controls
 			_allcelebrityList = Helper.Shuffle(_allcelebrityList);
 
 			List<Celebrity> celebsWithSameGender = celeb.Male
-				? _allcelebrityList.Where(c => c.Male).Where(
-					c => c.Name.ToLower() != celeb.Name.ToLower()).Take(3).ToList()
-				: _allcelebrityList.Where(c => c.Male != true).Where(
-					c => c.Name.ToLower() != celeb.Name.ToLower()).Take(3).ToList();
+				                                       ? _allcelebrityList.Where(c => c.Male).Where(
+					                                       c => c.Name.ToLower() != celeb.Name.ToLower()).Take(3).ToList()
+				                                       : _allcelebrityList.Where(c => c.Male != true).Where(
+					                                       c => c.Name.ToLower() != celeb.Name.ToLower()).Take(3).ToList();
 
 			celebsWithSameGender.Add(celeb);
 			Helper.Shuffle(celebsWithSameGender);
@@ -199,28 +190,25 @@ namespace KnowYourCeleb.Controls
 			_difficultyLevel = RadioExpert.IsChecked == true ? 4 : 2;
 			_timer.Start();
 			RadioRookie.IsEnabled = false;
+			HighHolder.IsEnabled = false;
 			RadioExpert.IsEnabled = false;
 		}
 
 		private void CompletedTheGame(bool winner)
 		{
-			
-			//DefeatedGame.IsOpen = true;
 			GameButtons.Visibility = Visibility.Collapsed;
-			var message = winner ? "Du kan allt om kändisar." : "Du tog dig inte riktigt ända fram, testa igen!";
-			var elementsInList = _celebrityList.Count;
+			string message = winner ? "Du kan allt om kändisar." : "Du tog dig inte riktigt ända fram, testa igen!";
+			int elementsInList = _celebrityList.Count;
 			if (elementsInList == 0)
 				elementsInList = 1;
 
-			var winnerPoints = (_timecounter*50 + 4000*_difficultyLevel)/elementsInList;
-			var looserPoints = ((4000/elementsInList)*_difficultyLevel);
-			var points = winner ? winnerPoints : looserPoints;
-			
-			
-			if(points > _highScore)
+			int winnerPoints = (_timecounter*50 + 4000*_difficultyLevel)/elementsInList;
+			int looserPoints = ((4000/elementsInList)*_difficultyLevel);
+			int points = winner ? winnerPoints : looserPoints;
+
+
+			if (points > _highScore)
 			{
-				HighScore.Text = points.ToString();
-				_highScore = points;
 				SaveHighScore(points);
 			}
 
@@ -228,51 +216,50 @@ namespace KnowYourCeleb.Controls
 			mes.ShowAsync();
 			GameButtons.Visibility = Visibility.Collapsed;
 			Dispose();
-
 		}
 
-		async void LoadHighScore()
-		{	
-
-			
-			Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-
-			
-			var currentHighScore = ApplicationData.Current.LocalFolder;
+		private void LoadHighScore()
+		{
 			try
-			{	
-				var file = await currentHighScore.GetFileAsync("highscore.txt");
-				var text = FileIO.ReadTextAsync(file, UnicodeEncoding.Utf8);
-
-				var high = _highScore;
-				int.TryParse(text.GetResults(), out high);
-				_highScore = high;
-				HighScore.Text = _highScore.ToString();
-				
-				var hej = new AsyncCallback(Target);
-				hej.BeginInvoke(hej, Target, object);
+			{
+				ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+				var high = localSettings.Values["highscore"];
+				var highScorer = localSettings.Values["highscorer"];
+				HighScorer.Text = highScorer.ToString();
+				HighScore.Text = high.ToString();
+				_highScore = (int)high;
 			}
 			catch (Exception)
 			{
-
-				_highScore = 0;
+				HighScore.Text = 0.ToString();
 			}
+		}
+
+
+		private void SaveHighScore(int points)
+		{
+			ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+			//localSettings.Values["highscore"] = 0;
 			
+			if (localSettings.Values["highscore"] != null && (int) localSettings.Values["highscore"] < points)
+			{
+				var holder = "Anonym...";
+				if(!string.IsNullOrEmpty(HighHolder.Text)){
+					holder = HighHolder.Text;
+				}
+				localSettings.Values["highscorer"] = holder;
+				HighScorer.Text = holder;
+				localSettings.Values["highscore"] = points;
+				HighScore.Text = points.ToString();
+			}
 
+			else if(localSettings.Values["highscore"] == null)
+			{
+				localSettings.Values["highscore"] = points;
+				HighScore.Text = points.ToString();
+			}
 		}
 
-		private void Target(IAsyncResult ar)
-		{
-			HighScore.Text = _highScore.ToString();
-		}
-
-		async void SaveHighScore(int points)
-		{
-			var localFolder = ApplicationData.Current.LocalFolder;
-			var file = await localFolder.CreateFileAsync("highscore.txt", CreationCollisionOption.ReplaceExisting);
-			await FileIO.WriteTextAsync(file, points.ToString());
-		}
-		
 		private void UpdateProgress()
 		{
 			try
@@ -289,7 +276,6 @@ namespace KnowYourCeleb.Controls
 		private void LoadPixels()
 		{
 			_pixelList = Helper.GetPixelList();
-
 		}
 
 		public void Dispose()
@@ -299,10 +285,9 @@ namespace KnowYourCeleb.Controls
 			StartButton.IsEnabled = true;
 			RadioRookie.IsEnabled = true;
 			RadioExpert.IsEnabled = true;
+			HighHolder.IsEnabled = true;
 			SetupGame();
 			SetImage("nopicture.jpg");
 		}
-
-		
 	}
 }

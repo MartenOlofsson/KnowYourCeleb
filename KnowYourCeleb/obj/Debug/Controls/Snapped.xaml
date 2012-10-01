@@ -7,25 +7,34 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Height="800" Width="320">
 	<Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" UseLayoutRounding="True">
-		<Grid HorizontalAlignment="Left" Height="298" Margin="51,19,0,0" VerticalAlignment="Top" Width="210">
-			<RadioButton Name="RadioRookie" Content="Nybörjare" HorizontalAlignment="Left" Margin="41,131,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-			<RadioButton Name="RadioExpert" Content="Expert" Margin="41,165,13,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-			<Button x:ConnectionId='5' x:Name="StartButton"                   Content="Starta Spel" HorizontalAlignment="Center" Margin="41,59,46,0" VerticalAlignment="Top" Height="47" Width="123" Grid.ColumnSpan="2"/>
-			<TextBlock FontSize="24" HorizontalAlignment="Center" Margin="23,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.093,0.667" Height="32" Width="187" Text="Vem är detta?"/>
+		<Grid HorizontalAlignment="Left" Height="307" Margin="10,10,0,0" VerticalAlignment="Top" Width="300">
+			<RadioButton Name="RadioRookie" Content="Nybörjare" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="109"/>
+			<RadioButton Name="RadioExpert" Content="Expert" Margin="10,101,181,0" VerticalAlignment="Top" Height="31"/>
+			<Button x:ConnectionId='5' x:Name="StartButton"                   Content="Starta Spel" HorizontalAlignment="Center" Margin="124,49,19,0" VerticalAlignment="Top" Height="93" Width="157" RenderTransformOrigin="0.488,1.22"/>
+			<TextBlock FontSize="24" HorizontalAlignment="Center" Margin="76,160,75,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.093,0.667" Height="32" Width="149" Text="Vem är detta?"/>
+			<TextBox Name="HighHolder" HorizontalAlignment="Left" MaxLength="10" Margin="124,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" RenderTransformOrigin="0.504,1.188" Height="32"/>
+			<TextBlock HorizontalAlignment="Left" Margin="37,10,0,0" TextWrapping="Wrap" Text="Ditt namn:" VerticalAlignment="Top" RenderTransformOrigin="-1.031,0.077" Height="12" Width="70"/>
 		</Grid>
-		<Grid Name="GameButtons" HorizontalAlignment="Left" Height="311" Margin="19,529,0,-40" VerticalAlignment="Top" Width="291">
-			<Button x:ConnectionId='1' Width="200" Name="First"                     Content="Button" HorizontalAlignment="Left" Margin="44,73,0,0" VerticalAlignment="Top"/>
-			<Button x:ConnectionId='2' Width="200" Name="Second"                      Content="Button" HorizontalAlignment="Left" Margin="44,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,0.382"/>
-			<Button x:ConnectionId='3' Width="200" Name="Third"                     Content="Button" HorizontalAlignment="Left" Margin="44,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.921,1.197"/>
-			<Button x:ConnectionId='4' Width="200" Name="Fourth"                      Content="Button" HorizontalAlignment="Left" Margin="44,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,1.553"/>
-			<Rectangle Name="Rektangle" Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="48" Margin="0,4,47,259" VerticalAlignment="Center" Width="200"/>
+		<Grid Name="GameButtons" HorizontalAlignment="Left" Height="269" Margin="19,512,0,0" VerticalAlignment="Top" Width="291">
+			<Button x:ConnectionId='1' MinWidth="250" Name="First"                     Content="Button" HorizontalAlignment="Center" Margin="18,10,23,0" VerticalAlignment="Top"/>
+			<Button x:ConnectionId='2' MinWidth="250" Name="Second"                      Content="Button" HorizontalAlignment="Center" Margin="18,49,23,0" VerticalAlignment="Top" RenderTransformOrigin="-0.383,0.382"/>
+			<Button x:ConnectionId='3' MinWidth="250" Name="Third"                     Content="Button" HorizontalAlignment="Center" Margin="18,88,23,0" VerticalAlignment="Top" RenderTransformOrigin="-0.921,1.197"/>
+			<Button x:ConnectionId='4' MinWidth="250" Name="Fourth"                      Content="Button" HorizontalAlignment="Center" Margin="18,127,23,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,1.553"/>
+			<Rectangle Name="Rektangle" Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="30" Margin="0,182,48,57" VerticalAlignment="Center" MaxWidth="200" Width="200"/>
+			
 		</Grid>
-		<Grid HorizontalAlignment="Left" Height="305" Margin="10,219,-84,0" VerticalAlignment="Top" Width="385">
+
+		<Grid HorizontalAlignment="Left" Height="293" Margin="0,240,0,0" VerticalAlignment="Top" Width="320">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="58*"/>
 				<ColumnDefinition Width="327*"/>
 			</Grid.ColumnDefinitions>
-			<Canvas x:Name="MainCanvas" HorizontalAlignment="Left" Height="250" Margin="34,32,0,0" VerticalAlignment="Top" Width="250" RenderTransformOrigin="-0.21,0.08" Background="White" Grid.ColumnSpan="2"/>
+			<Canvas x:Name="MainCanvas" HorizontalAlignment="Center" Height="250" Margin="36,0,34,0" VerticalAlignment="Top" Width="250" RenderTransformOrigin="-0.21,0.08" Background="White" Grid.ColumnSpan="2"/>
+		</Grid>
+		<Grid HorizontalAlignment="Left" Height="33" Margin="10,748,0,0" VerticalAlignment="Top" Width="300">
+			<TextBlock FontSize="20" HorizontalAlignment="Left" Margin="25,10,0,-1" TextWrapping="Wrap" Text="HighScore:" VerticalAlignment="Top"/>
+			<TextBlock FontSize="20" Name="HighScore" HorizontalAlignment="Left" Margin="249,10,0,-1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="Red" RenderTransformOrigin="5.455,0.375"/>
+			<TextBlock FontSize="20" Name="HighScorer" HorizontalAlignment="Left" Margin="134,10,0,-1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 		</Grid>
 	</Grid>
 </UserControl>

@@ -33,22 +33,21 @@ namespace KnowYourCeleb
 		private void CurrentOnSizeChanged(object sender, WindowSizeChangedEventArgs e)
 		{
 			var viewState = ApplicationView.Value;
-			
+			NormalView.Dispose();
+			NormalView.SetupGame();
+			SnappedView.Dispose();
+			SnappedView.SetupGame();
 
 			if (viewState == ApplicationViewState.Snapped)
 			{
 				NormalView.Visibility = Visibility.Collapsed;
 				SnappedView.Visibility = Visibility.Visible;
-				NormalView.Dispose();
-				NormalView.SetupGame();
-
 			}
 			else
 			{
 				NormalView.Visibility = Visibility.Visible;
 				SnappedView.Visibility = Visibility.Collapsed;
-				SnappedView.Dispose();
-				SnappedView.SetupGame();
+				
 				
 			}
 		}
